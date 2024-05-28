@@ -38,7 +38,7 @@ for element in soup.find_all(string=True):
         translated_text = ''.join(translated_chunks)
         element.replace_with(translated_text)
 
-# Manually change the <html lang="pt-br"> to <html lang="en">
+# Manually change the <html lang to "en">
 html_tag = soup.find('html')
 if html_tag:
     html_tag['lang'] = 'en'
